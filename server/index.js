@@ -13,7 +13,6 @@ app.use(bodyParser.json({ limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true}));
 app.use(cors());
 
-// const mongoDB = mongoose();
 const CONNECTION_URL = 'mongodb://localhost:27017/travel_journal_db';
 const PORT = process.env.PORT || 5000;
 mongoose.connect(CONNECTION_URL)
@@ -21,5 +20,4 @@ mongoose.connect(CONNECTION_URL)
     .catch((error) => console.error(error.message));
 
 // mongoose.set('useFindAndModify', false);
-// const PORT = process.env.PORT || 5000;
 
